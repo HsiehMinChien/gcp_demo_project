@@ -1,0 +1,27 @@
+.top-bar
+	.logo
+		padding-top: 10px
+		text-align: center
+
+	.contact-info
+		text-align: -webkit-right
+		cursor: pointer
+		> div
+			margin: 10px 10px 0 0
+			padding: 10px
+			text-align: center
+			border: 1px solid red
+			color: red
+			font-weight: 700
+			width: 140px
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:visited
+				color: white
+				background-color: red
+				text-decoration: none
+			
+			@media only screen and (max-width: 768px)
+				display: none
