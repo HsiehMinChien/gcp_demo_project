@@ -1,15 +1,22 @@
 import { Nav, Navbar } from "react-bootstrap";
 import { ReactNode } from "react";
+import cx from "classnames";
 import TopBar from "../top-bar";
 import FootBar from "../footer-bar";
-import Icon from "../icon";
+import { convertedImgUrl } from "../utils";
 import "./style.styl";
 
 const PREFIX_CLASS = "page-container";
 
-export default function PageContainer({ children }: { children: ReactNode }) {
+export default function PageContainer({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <div className={PREFIX_CLASS}>
+    <div className={cx(PREFIX_CLASS, className)}>
       <TopBar />
       <Navbar expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -27,13 +34,13 @@ export default function PageContainer({ children }: { children: ReactNode }) {
             </Nav.Link>
             <Nav className="img-link">
               <Nav.Link href="/contact-us" eventKey="contact-us">
-                <img src="/images/social-line-s.png" />
+                <img src={convertedImgUrl("/images/social-line-s.png")} />
               </Nav.Link>
               <Nav.Link href="/contact-us" eventKey="contact-us">
-                <img src="/images/social-fb-s.png" />
+                <img src={convertedImgUrl("/images/social-fb-s.png")} />
               </Nav.Link>
               <Nav.Link href="/contact-us" eventKey="contact-us">
-                <img src="/images/social-ig-s.png" />
+                <img src={convertedImgUrl("/images/social-ig-s.png")} />
               </Nav.Link>
             </Nav>
           </Nav>

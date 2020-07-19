@@ -1,6 +1,6 @@
 import { convertedImgUrl } from "../utils";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import Icon from "../../components/icon";
+import constant from "../../components/constant";
 import "./style.styl";
 
 const PREFIX_CLASS = "footer-bar";
@@ -13,11 +13,11 @@ export default function FooterBar() {
         <img src={convertedImgUrl("/images/_footer_img.jpg")} />
       </div>
       <div className="copy-right">© All rights reserved.</div>
-      <div className="tel">02-34567890</div>
+      <div className="tel">{constant.tel}</div>
       <div className="location">
-        <a href="/">新北市板橋區雙十路二段 209 號 21 樓</a>
+        <a href="/">新北市ＯＯ區ＯＯ路Ｏ段 XXX 號 XX 樓</a>
         <div className="icon">
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
+          <Icon icon={Icon.IconMap.map} />
         </div>
       </div>
     </div>

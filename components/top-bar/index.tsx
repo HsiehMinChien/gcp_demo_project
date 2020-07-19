@@ -15,10 +15,10 @@ export default function TopBar() {
   return (
     <>
       <Head>
-        <title>ＯＯ資產管理有限公</title>
+        <title>{constant.corpName}資產管理有限公</title>
         <link
           rel="shortcut icon"
-          href={convertedImgUrl("/images/favicon.ico")}
+          href={convertedImgUrl("/images/favicon_1.ico")}
         />
         <link
           rel="stylesheet"
@@ -38,7 +38,7 @@ export default function TopBar() {
           <div onClick={_handleClickContactInfo}>
             聯絡專線
             <br />
-            02-34567890
+            {constant.tel}
           </div>
         </Col>
       </Row>
