@@ -20,6 +20,12 @@ export default function TopBar() {
           rel="shortcut icon"
           href={convertedImgUrl("/images/favicon.ico")}
         />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+          integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+          crossOrigin="anonymous"
+        />
       </Head>
       <Row className={PREFIX_CLASS}>
         <Col xs="4" sm="4" md="4"></Col>

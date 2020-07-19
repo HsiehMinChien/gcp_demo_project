@@ -1,7 +1,8 @@
 import { Nav, Navbar } from "react-bootstrap";
+import { ReactNode } from "react";
 import TopBar from "../top-bar";
 import FootBar from "../footer-bar";
-import { ReactNode } from "react";
+import Icon from "../icon";
 import "./style.styl";
 
 const PREFIX_CLASS = "page-container";
@@ -24,6 +25,17 @@ export default function PageContainer({ children }: { children: ReactNode }) {
             <Nav.Link href="/contact-us" eventKey="contact-us">
               聯絡我們
             </Nav.Link>
+            <Nav className="img-link">
+              <Nav.Link href="/contact-us" eventKey="contact-us">
+                <img src="/images/social-line-s.png" />
+              </Nav.Link>
+              <Nav.Link href="/contact-us" eventKey="contact-us">
+                <img src="/images/social-fb-s.png" />
+              </Nav.Link>
+              <Nav.Link href="/contact-us" eventKey="contact-us">
+                <img src="/images/social-ig-s.png" />
+              </Nav.Link>
+            </Nav>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
