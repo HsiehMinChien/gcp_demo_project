@@ -15,10 +15,6 @@ yarn install
 yarn dev
 ```
 
-## Deploy
-
-https://cloud.google.com/run/docs/quickstarts/build-and-deploy
-
 ### Build image
 
 ```
