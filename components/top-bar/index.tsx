@@ -15,7 +15,7 @@ export default function TopBar() {
   return (
     <>
       <Head>
-        <title>{constant.corpName}資產管理有限公</title>
+        <title>{constant.corpName}資產管理有限公司</title>
         <link
           rel="shortcut icon"
           href={convertedImgUrl("/images/favicon_1.ico")}
@@ -29,10 +29,11 @@ export default function TopBar() {
       </Head>
       <Row className={PREFIX_CLASS}>
         <Col xs="4" sm="4" md="4"></Col>
-        <Col className="logo" xs="12" sm="12" md="4">
-          <a href="/">
-            <img src={convertedImgUrl("/images/logo.jpg")} />
-          </a>
+        <Col className="logo" xs="12" sm="12" md="12" lg="4">
+          <div>
+            <img src={convertedImgUrl("/images/logo.png")} />
+            <p>{constant.corpName}資產公司</p>
+          </div>
         </Col>
         <Col xs="4" sm="4" md="4" className="contact-info">
           <div onClick={_handleClickContactInfo}>

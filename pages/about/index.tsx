@@ -1,11 +1,35 @@
+import { Row, Col } from "react-bootstrap";
 import PageContainer from "../../components/page-container";
 import ContactUsAndAboutMeCommonContent from "../../components/contact-us-and-about-me-common-content";
+import constant from "../../components/constant";
+import "./style.styl";
+
+const PREFIX_CLASS = "about-page";
 
 export default function About() {
   return (
-    <PageContainer>
+    <PageContainer className={PREFIX_CLASS}>
       <ContactUsAndAboutMeCommonContent type="about">
-        <div>About.</div>
+        <div className="content">
+          <h1>About us</h1>
+          <div>資金融資找{constant.corpName}，資金到位更容易!</div>
+          <Row>
+            <Col md="12" lg="5">
+              {constant.corpName}
+              融資在大台北融資市場已有二十年的服務經驗，經營理念秉持以誠信為原則，正派經營、專業服務、熱忱親切、積極負任是我們堅持對待客戶的態度。
+              <br />
+              <br />
+              團隊皆具備融資、資金週轉等相關專業知識，用心傾聽每位客戶的需求，以完整的互動式諮詢為中小企業及個人提供最強而有力的資金後盾，迅速合法的給予最安全的融資管道。
+              <br />
+              <br />
+              對於我們的客戶，{constant.corpName}
+              採最嚴格保密的要求，把關您的個資，以及透明化的服務，讓您融資借貸更為安心。
+            </Col>
+            <Col md="12" lg="7">
+              <img src="/images/feature.jpg" />
+            </Col>
+          </Row>
+        </div>
       </ContactUsAndAboutMeCommonContent>
     </PageContainer>
   );
