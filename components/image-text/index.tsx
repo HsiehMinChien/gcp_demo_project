@@ -25,12 +25,12 @@ export default function ImageText({
       <Col md="12" lg="3" className="image" onClick={_handleClickTitle}>
         <img src={src} />
       </Col>
-      <Col md="12" lg="9" className="content">
+      <Col md="12" lg="9" className="text-content">
         <div className="date">{date}</div>
         <div className="title" onClick={_handleClickTitle}>
           {title}
         </div>
-        <div className="content-detail">{text}</div>
+        <div className="text-content-detail">{text}</div>
       </Col>
     </Row>
   );
