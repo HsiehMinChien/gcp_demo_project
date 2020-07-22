@@ -1,5 +1,6 @@
 import PageContainer from "../../components/page-container";
 import ImageText from "../../components/image-text";
+import { convertedImgUrl } from "../../components/utils";
 import "./style.styl";
 
 const PREFIX_CLASS = "news-page";
@@ -26,8 +27,8 @@ const news = [
 
 export default function News() {
   return (
-    <PageContainer>
-      <div className={PREFIX_CLASS}>
+    <PageContainer className={PREFIX_CLASS}>
+      <div className="content">
         <h1>News</h1>
         <div>
           {news.map(function (n) {
@@ -43,6 +44,9 @@ export default function News() {
           })}
         </div>
       </div>
+      <section>
+        <img src={convertedImgUrl(`/images/news.jpg`)} />
+      </section>
     </PageContainer>
   );
 }
