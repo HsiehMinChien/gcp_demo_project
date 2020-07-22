@@ -18,7 +18,7 @@ export default function TopBar() {
         <title>{constant.corpName}資產管理有限公司</title>
         <link
           rel="shortcut icon"
-          href={convertedImgUrl("/images/favicon_1.ico")}
+          href={convertedImgUrl("/images/favicon_2.ico")}
         />
         <link
           rel="stylesheet"

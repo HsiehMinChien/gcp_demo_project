@@ -14,7 +14,7 @@ export default function ContactUsAndAboutMeCommonContent({
   return (
     <div className={PREFIX_CLASS}>
       <section>
-        <img src={convertedImgUrl(`/images/${type}-us.jpg`)} />
+        <img src={convertedImgUrl(`/images/${type}-us-01.jpg`)} />
       </section>
       <section>{children}</section>
       <section>

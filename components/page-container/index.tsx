@@ -4,6 +4,7 @@ import cx from "classnames";
 import TopBar from "../top-bar";
 import FootBar from "../footer-bar";
 import { convertedImgUrl } from "../utils";
+import constant from "../constant";
 import "./style.styl";
 
 const PREFIX_CLASS = "page-container";
@@ -33,13 +34,13 @@ export default function PageContainer({
               聯絡我們
             </Nav.Link>
             <Nav className="img-link">
-              <Nav.Link href="/contact-us" eventKey="contact-us">
+              <Nav.Link href={constant.line} target="_blank">
                 <img src={convertedImgUrl("/images/social-line-s.png")} />
               </Nav.Link>
-              <Nav.Link href="/contact-us" eventKey="contact-us">
+              <Nav.Link href={constant.fb} target="_blank">
                 <img src={convertedImgUrl("/images/social-fb-s.png")} />
               </Nav.Link>
-              <Nav.Link href="/contact-us" eventKey="contact-us">
+              <Nav.Link href={constant.instgrame} target="_blank">
                 <img src={convertedImgUrl("/images/social-ig-s.png")} />
               </Nav.Link>
             </Nav>
