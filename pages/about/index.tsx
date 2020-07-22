@@ -2,6 +2,7 @@ import { Row, Col } from "react-bootstrap";
 import PageContainer from "../../components/page-container";
 import ContactUsAndAboutMeCommonContent from "../../components/contact-us-and-about-me-common-content";
 import constant from "../../components/constant";
+import { convertedImgUrl } from "../../components/utils";
 import "./style.styl";
 
 const PREFIX_CLASS = "about-page";
@@ -28,7 +29,7 @@ export default function About() {
               採最嚴格保密的要求，把關您的個資，以及透明化的服務，讓您融資借貸更為安心。
             </Col>
             <Col md="12" lg="7" className="image">
-              <img src="/images/feature.jpg" />
+              <img src={convertedImgUrl("/images/feature.jpg")} />
             </Col>
           </Row>
         </div>
