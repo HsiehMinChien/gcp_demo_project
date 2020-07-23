@@ -31,8 +31,7 @@ export default function TopBar() {
         <Col xs="4" sm="4" md="4"></Col>
         <Col className="logo" xs="12" sm="12" md="12" lg="4">
           <div>
-            <img src={convertedImgUrl("/images/logo.png")} />
-            <p>{constant.corpName}資產公司</p>
+            <img src={convertedImgUrl("/images/logo_1.png")} />
           </div>
         </Col>
         <Col xs="4" sm="4" md="4" className="contact-info">

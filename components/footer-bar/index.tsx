@@ -10,8 +10,7 @@ export default function FooterBar() {
     <div className={PREFIX_CLASS}>
       <div className="up-bar" />
       <div className="img">
-        <img src={convertedImgUrl("/images/logo.png")} />
-        <div>{constant.corpName}資產管理有限公司</div>
+        <img src={convertedImgUrl("/images/_footer_img_1.png")} />
       </div>
       <div className="copy-right">© All rights reserved.</div>
       <div className="tel">{constant.tel}</div>
