@@ -7,9 +7,9 @@ import "./style.styl";
 const PREFIX_CLASS = "top-bar";
 
 export default function TopBar() {
-  function _handleClickContactInfo() {
+  function _handleClickContactInfo(href: string) {
     let a = document.createElement("a");
-    a.href = `Tel:${constant.tel}`;
+    a.href = href;
     a.click();
   }
   return (
@@ -30,15 +30,17 @@ export default function TopBar() {
       <Row className={PREFIX_CLASS}>
         <Col xs="4" sm="4" md="4"></Col>
         <Col className="logo" xs="12" sm="12" md="12" lg="4">
-          <div>
+          <div onClick={() => _handleClickContactInfo("/")}>
             <img src={convertedImgUrl("/images/logo_1.png")} />
           </div>
         </Col>
         <Col xs="4" sm="4" md="4" className="contact-info">
-          <div onClick={_handleClickContactInfo}>
+          <div
+            onClick={() => _handleClickContactInfo(`Tel:${constant.local_tel}`)}
+          >
             聯絡專線
             <br />
-            {constant.tel}
+            {constant.local_tel}
           </div>
         </Col>
       </Row>

@@ -13,7 +13,7 @@ export default function FooterBar() {
         <img src={convertedImgUrl("/images/_footer_img_1.png")} />
       </div>
       <div className="copy-right">© All rights reserved.</div>
-      <div className="tel">{constant.tel}</div>
+      <div className="tel">{`手機: ${constant.tel}, 市話: ${constant.local_tel}, ${constant.cs}`}</div>
       <div className="location">
         <a href="/">新北市ＯＯ區ＯＯ路Ｏ段 XXX 號 XX 樓</a>
         <div className="icon">

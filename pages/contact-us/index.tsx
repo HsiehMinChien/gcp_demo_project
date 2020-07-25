@@ -7,12 +7,12 @@ import { convertedImgUrl } from "../../components/utils";
 import "./style.styl";
 
 const PREFIX_CLASS = "contact-us-page";
-const { fb, line, lineId, instgrame, tel, corpName } = constant;
+const { fb, line, lineId, instgrame, tel, local_tel, cs, corpName } = constant;
 
 export default function ContactUs() {
-  function _handleClickContactUs(href: string) {
+  function _handleClickContactUs(href: string, isBlank?: boolean) {
     let a = document.createElement("a");
-    a.target = "_blank";
+    a.target = isBlank ? "_blank" : "";
     a.href = href;
     a.click();
   }
@@ -21,11 +21,20 @@ export default function ContactUs() {
       <ContactUsAndAboutMeCommonContent type="contact">
         <div className="content">
           <h1>Contact us</h1>
-          <div
-            className="sub-title"
-            onClick={() => _handleClickContactUs(`Tel:${tel}`)}
-          >
-            服務熱線 {tel}
+          <div className="sub-title">
+            服務熱線 ({cs})
+            <div
+              className="anchor"
+              onClick={() => _handleClickContactUs(`Tel:${tel}`)}
+            >
+              手機: {tel}
+            </div>
+            <div
+              className="anchor"
+              onClick={() => _handleClickContactUs(`Tel:${local_tel}`)}
+            >
+              市話: {local_tel}
+            </div>
           </div>
           <Row>
             <Col xs="12" lg="9" className="links">
@@ -33,7 +42,7 @@ export default function ContactUs() {
                 <Col xs="12" lg="4">
                   <div
                     className="link ig"
-                    onClick={() => _handleClickContactUs(instgrame)}
+                    onClick={() => _handleClickContactUs(instgrame, true)}
                   >
                     <Icon icon={Icon.IconMap.instagram} />
                     <div className="link-description">追蹤{corpName} IG</div>
@@ -42,7 +51,7 @@ export default function ContactUs() {
                 <Col xs="12" lg="4">
                   <div
                     className="link line"
-                    onClick={() => _handleClickContactUs(line)}
+                    onClick={() => _handleClickContactUs(line, true)}
                   >
                     <Icon icon={Icon.IconMap.line} />
                     <div className="link-description">Line 線上諮詢</div>
@@ -51,7 +60,7 @@ export default function ContactUs() {
                 <Col xs="12" lg="4">
                   <div
                     className="link fb"
-                    onClick={() => _handleClickContactUs(fb)}
+                    onClick={() => _handleClickContactUs(fb, true)}
                   >
                     <Icon icon={Icon.IconMap.facebook} />
                     <div className="link-description">{corpName}粉絲團</div>
@@ -60,7 +69,10 @@ export default function ContactUs() {
               </Row>
             </Col>
             <Col xs="12" lg="3" className="qr-code-and-id">
-              <img src={convertedImgUrl("/images/qr.jpg")} />
+              <img
+                src={convertedImgUrl("/images/qr.jpg")}
+                onClick={() => _handleClickContactUs(line, true)}
+              />
               <div className="line-id">ID / {lineId}</div>
             </Col>
           </Row>
