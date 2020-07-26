@@ -34,6 +34,7 @@ export default function News() {
           {news.map(function (n) {
             return (
               <ImageText
+                key={n.newsUrl}
                 date={n.date}
                 src={n.src}
                 title={n.title}

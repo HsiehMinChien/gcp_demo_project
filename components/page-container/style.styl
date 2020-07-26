@@ -3,7 +3,8 @@
     margin-top: 20px
     background-color: #f6da99
     .justify-content-center.navbar-nav
-      > a
+      > a,
+      > div
         font-size: 20px
         font-weight: 700
         &:hover,
@@ -12,6 +13,12 @@
         @media only screen and (min-width: 992px)
           width: 20vw
           text-align: center
+      .dropdown-menu
+        background-color: #f6da99
+        .dropdown-item
+          &:hover
+            background-color: #f6da99
+            color: #9c5e11
 
   .img-link
     &.navbar-nav

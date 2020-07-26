@@ -1,6 +1,6 @@
 import { Row, Col } from "react-bootstrap";
 import PageContainer from "../../components/page-container";
-import ContactUsAndAboutMeCommonContent from "../../components/contact-us-and-about-me-common-content";
+import PageInnerContainer from "../../components/page-inner-container";
 import Icon from "../../components/icon";
 import constant from "../../components/constant";
 import { convertedImgUrl } from "../../components/utils";
@@ -18,7 +18,7 @@ export default function ContactUs() {
   }
   return (
     <PageContainer className={PREFIX_CLASS}>
-      <ContactUsAndAboutMeCommonContent type="contact">
+      <PageInnerContainer type="contact-us">
         <div className="content">
           <h1>Contact us</h1>
           <div className="sub-title">
@@ -77,7 +77,7 @@ export default function ContactUs() {
             </Col>
           </Row>
         </div>
-      </ContactUsAndAboutMeCommonContent>
+      </PageInnerContainer>
     </PageContainer>
   );
 }

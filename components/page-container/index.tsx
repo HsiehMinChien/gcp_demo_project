@@ -1,15 +1,30 @@
-import { Nav, Navbar } from "react-bootstrap";
 import { ReactNode } from "react";
 import cx from "classnames";
+import CustomizNavbar from "../navbar";
 import TopBar from "../top-bar";
 import FootBar from "../footer-bar";
-import { convertedImgUrl } from "../utils";
-import constant from "../constant";
 import "./style.styl";
 
 const PREFIX_CLASS = "page-container";
+const servicesTitleMap = {
+  ENTERPRISE: "企業融資(L/C信用保證)",
+  PAYCHECK: "支票客票融資",
+  STOCK: "股票交割代墊款",
+  HOUSE: "房屋土地二胎融資",
+  CAR: "汽車融資",
+  PERSONAL: "個人信用融資",
+};
+const { ENTERPRISE, PAYCHECK, STOCK, HOUSE, CAR, PERSONAL } = servicesTitleMap;
+const pageDropdownMap = {
+  [ENTERPRISE]: "ENTERPRISE",
+  [PAYCHECK]: "PAYCHECK",
+  [STOCK]: "STOCK",
+  [HOUSE]: "HOUSE",
+  [CAR]: "CAR",
+  [PERSONAL]: "PERSONAL",
+};
 
-export default function PageContainer({
+function PageContainer({
   children,
   className,
 }: {
@@ -19,36 +34,14 @@ export default function PageContainer({
   return (
     <div className={cx(PREFIX_CLASS, className)}>
       <TopBar />
-      <Navbar expand="lg">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="justify-content-center">
-            <Nav.Link href="/about">關於我們</Nav.Link>
-            <Nav.Link href="/services" eventKey="services">
-              服務項目
-            </Nav.Link>
-            <Nav.Link href="/news" eventKey="news">
-              最新消息
-            </Nav.Link>
-            <Nav.Link href="/contact-us" eventKey="contact-us">
-              聯絡我們
-            </Nav.Link>
-            <Nav className="img-link">
-              <Nav.Link href={constant.line} target="_blank">
-                <img src={convertedImgUrl("/images/social-line-s.png")} />
-              </Nav.Link>
-              <Nav.Link href={constant.fb} target="_blank">
-                <img src={convertedImgUrl("/images/social-fb-s.png")} />
-              </Nav.Link>
-              <Nav.Link href={constant.instgrame} target="_blank">
-                <img src={convertedImgUrl("/images/social-ig-s.png")} />
-              </Nav.Link>
-            </Nav>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <CustomizNavbar servicesTitleMap={servicesTitleMap} />
       {children}
       <FootBar />
     </div>
   );
 }
+
+PageContainer.servicesTitleMap = servicesTitleMap;
+PageContainer.pageDropdownMap = pageDropdownMap;
+
+export default PageContainer;
