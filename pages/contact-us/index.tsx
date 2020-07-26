@@ -73,7 +73,7 @@ export default function ContactUs() {
                 src={convertedImgUrl("/images/qr.jpg")}
                 onClick={() => _handleClickContactUs(line, true)}
               />
-              <div className="line-id">ID / {lineId}</div>
+              <div className="line-id">Line QR Code</div>
             </Col>
           </Row>
         </div>

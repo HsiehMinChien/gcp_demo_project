@@ -1,5 +1,5 @@
 const commonStorageUrl = "https://storage.googleapis.com/demp_files/public";
-const isLocal = true;
+const isLocal = false;
 const local_tel = "02-2550-4111";
 const tel = "0966-165-573";
 const cs = "郭經理";

@@ -76,6 +76,7 @@ function View({ router }: { router: any }) {
             <Col
               md="12"
               lg="4"
+              key={service}
               onClick={() => push(`/services?page=${service}`)}
             >
               <div>{service}</div>
@@ -95,7 +96,9 @@ function View({ router }: { router: any }) {
             <h3>最新消息</h3>
             <ul>
               {news.map((n) => (
-                <li onClick={() => push("/news")}>{n.title}</li>
+                <li key={n.title} onClick={() => push("/news")}>
+                  {n.title}
+                </li>
               ))}
             </ul>
             <div className="more-button">
@@ -131,8 +134,8 @@ function View({ router }: { router: any }) {
               >
                 手機：{tel}
               </div>
-              <img src="/images/qr.jpg" />
-              <div className="line-id">ID:{lineId}</div>
+              <img src={convertedImgUrl("/images/qr.jpg")} />
+              <div className="line-id">Line QR Code</div>
               <a href={constant.line} target="_blank">
                 <img src={convertedImgUrl("/images/social-line-s.png")} />
               </a>

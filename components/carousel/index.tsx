@@ -40,7 +40,7 @@ function Carousel() {
       <RBCarousel.Item>
         <img
           className="d-block w-100"
-          src="/images/service.jpg"
+          src={convertedImgUrl("/images/service.jpg")}
           alt="高品質全方面服務"
         />
         <RBCarousel.Caption>
