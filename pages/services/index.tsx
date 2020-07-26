@@ -1,12 +1,14 @@
 import cx from "classnames";
 import PageContainer from "../../components/page-container";
 import PageInnerContainer from "../../components/page-inner-container";
+import constant from "../../components/constant";
 import { withRouter } from "next/router";
 import { Tab, Row, Col, Nav, Table } from "react-bootstrap";
 import "./style.styl";
 
 const PREFIX_CLASS = "services-page";
-const { servicesTitleMap, pageDropdownMap } = PageContainer;
+const { servicesTitleMap } = constant;
+const { pageDropdownMap } = PageContainer;
 const { ENTERPRISE, PAYCHECK, STOCK, HOUSE, PERSONAL, CAR } = servicesTitleMap;
 const servicesContentMap = {
   [ENTERPRISE]: [
@@ -110,7 +112,6 @@ function Services({ router }: { router: any }) {
     push,
   } = router;
 
-  console.log(router);
   return (
     <PageContainer className={PREFIX_CLASS}>
       <PageInnerContainer type="services">
