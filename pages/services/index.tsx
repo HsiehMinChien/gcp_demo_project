@@ -111,6 +111,8 @@ function Services({ router }: { router: any }) {
     query: { page = ENTERPRISE },
     push,
   } = router;
+  const defaultActiveKey = pageDropdownMap[page] ? pageDropdownMap[page] : pageDropdownMap[ENTERPRISE];
+  const displayPage = servicesContentMap.hasOwnProperty(page) ? page : ENTERPRISE;
 
   return (
     <PageContainer className={PREFIX_CLASS}>
@@ -118,7 +120,7 @@ function Services({ router }: { router: any }) {
         <div className="content">
           <Tab.Container
             id="left-tabs-example"
-            activeKey={pageDropdownMap[page]}
+            activeKey={defaultActiveKey}
             defaultActiveKey={"ENTERPRISE"}
           >
             <Row>
@@ -128,7 +130,7 @@ function Services({ router }: { router: any }) {
                   {Object.values(servicesTitleMap).map((service: any) => (
                     <Nav.Item
                       key={service}
-                      className={cx({ active: service === page })}
+                      className={cx({ active: service === displayPage })}
                     >
                       <Nav.Link
                         onClick={() => push(`/services?page=${service}`)}
@@ -140,7 +142,7 @@ function Services({ router }: { router: any }) {
                 </Nav>
               </Col>
               <Col md="12" lg="9">
-                <h2>{page}</h2>
+                <h2>{displayPage}</h2>
                 <Tab.Content>
                   {Object.values(servicesTitleMap).map((service: any) => (
                     <Tab.Pane key={service} eventKey={pageDropdownMap[service]}>
