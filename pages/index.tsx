@@ -135,7 +135,7 @@ function View({ router }: { router: any }) {
                 手機：{tel}
               </div>
               <img src={convertedImgUrl("/images/qr.jpg")} />
-              <div className="line-id">Line QR Code</div>
+              <div className="line-id">Line ID: {lineId}</div>
               <a href={constant.line} target="_blank">
                 <img src={convertedImgUrl("/images/social-line-s.png")} />
               </a>
