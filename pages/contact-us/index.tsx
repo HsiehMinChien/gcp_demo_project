@@ -20,7 +20,7 @@ export default function ContactUs() {
     <PageContainer className={PREFIX_CLASS}>
       <PageInnerContainer type="contact-us">
         <div className="content">
-          <h1>Contact us</h1>
+          <h1>聯絡我們</h1>
           <div className="sub-title">
             服務熱線 ({cs})
             <div

@@ -111,8 +111,12 @@ function Services({ router }: { router: any }) {
     query: { page = ENTERPRISE },
     push,
   } = router;
-  const defaultActiveKey = pageDropdownMap[page] ? pageDropdownMap[page] : pageDropdownMap[ENTERPRISE];
-  const displayPage = servicesContentMap.hasOwnProperty(page) ? page : ENTERPRISE;
+  const defaultActiveKey = pageDropdownMap[page]
+    ? pageDropdownMap[page]
+    : pageDropdownMap[ENTERPRISE];
+  const displayPage = servicesContentMap.hasOwnProperty(page)
+    ? page
+    : ENTERPRISE;
 
   return (
     <PageContainer className={PREFIX_CLASS}>
@@ -125,7 +129,7 @@ function Services({ router }: { router: any }) {
           >
             <Row>
               <Col md="12" lg="3">
-                <h1>Services</h1>
+                <h1>服務項目</h1>
                 <Nav className="flex-column">
                   {Object.values(servicesTitleMap).map((service: any) => (
                     <Nav.Item

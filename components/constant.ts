@@ -8,6 +8,8 @@ const line = "https://line.me/ti/p/YEIjrQu1cO";
 const lineId = "Kuotzujui";
 const instgrame = "";
 const corpName = "華昇";
+const corpAddress = "新北市板橋區雙十路二段 209 號 21 樓";
+const corpAddressGoogleMap = "https://goo.gl/maps/pHNABRYoQiWVHWCg7";
 
 const servicesTitleMap = {
   ENTERPRISE: "企業融資(L/C信用保證)",
@@ -52,4 +54,6 @@ export default {
   corpName,
   servicesTitleMap,
   news,
+  corpAddress,
+  corpAddressGoogleMap,
 };

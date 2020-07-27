@@ -103,7 +103,7 @@ function View({ router }: { router: any }) {
             </ul>
             <div className="more-button">
               <Button variant="outline-dark" onClick={() => push("/news")}>
-                More
+                更多
               </Button>
             </div>
           </Col>

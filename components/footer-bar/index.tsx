@@ -19,7 +19,7 @@ export default function FooterBar() {
         <div>{`市話: ${constant.local_tel}`}</div>
       </div>
       <div className="location">
-        <a href="/">新北市ＯＯ區ＯＯ路Ｏ段 XXX 號 XX 樓</a>
+        <a href={constant.corpAddressGoogleMap}>{constant.corpAddress}</a>
         <div className="icon">
           <Icon icon={Icon.IconMap.map} />
         </div>
