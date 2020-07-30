@@ -7,14 +7,6 @@ import constant from "../constant";
 import "./style.styl";
 
 const PREFIX_CLASS = "page-container";
-// const servicesTitleMap = {
-//   ENTERPRISE: "企業融資(L/C信用保證)",
-//   PAYCHECK: "支票客票融資",
-//   STOCK: "股票交割代墊款",
-//   HOUSE: "房屋土地二胎融資",
-//   CAR: "汽車融資",
-//   PERSONAL: "個人信用融資",
-// };
 const { servicesTitleMap } = constant;
 const { ENTERPRISE, PAYCHECK, STOCK, HOUSE, CAR, PERSONAL } = servicesTitleMap;
 const pageDropdownMap = {
