@@ -20,6 +20,7 @@ export default function TopBar() {
         <title>{constant.corpName}資產管理有限公司</title>
         {metaList.map((meta) => (
           <meta
+            key={meta}
             name={meta}
             property={`og:${meta}`}
             content={`公司票貼，股票交割金代墊，個人信用貸款，土地/房屋二胎，汽/機車貸款。申辦容易，撥款快速。${constant.corpName}讓資金到位更容易。`}
